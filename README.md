@@ -60,7 +60,7 @@ Consulte también la lista de [colaboradores] (https://github.com/your/project/c
 
 ## licencia
 
-Este proyecto está licenciado bajo la Licencia MIT - vea el archivo [LICENSE.md] para más detalles
+Este proyecto está licenciado bajo la Licencia MIT - vea el archivo [LICENSE.md](LICENSE.md) para más detalles
 <!--
 ## Agradecimientos
 

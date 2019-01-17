@@ -13,13 +13,13 @@ git clone https://github.com/andresflorezp/AREP-TAREA1.git
 * Maven
 * Java
 * Git
-* Eclipse !!Super importante
+
 
 
 ### Instalación
 
 Despues de clonar el archivo para correrlo con:
-* mvn compile y luego
+* mvn package
 
 
 
@@ -27,8 +27,8 @@ Despues de clonar el archivo para correrlo con:
 
 ## Ejecutando las pruebas
 
-Correr los test desde el IDE ECLIPSE
-si se corren los tests desde consola van a fallar por la ruta de los archivos de prueba por ende correr los TEST desde el editor.
+Para correr los test con
+* mvn test
 
 ### Desglosar en pruebas de extremo a extremo
 

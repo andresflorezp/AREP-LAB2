@@ -28,6 +28,7 @@ public class Lectura {
 			BufferedReader in = new BufferedReader(new FileReader(myCurrentDir+"\\src\\main\\java\\edu\\escuelaing\\arem\\ASE\\app\\"+test));
 			N =Integer.parseInt(in.readLine());
 			String linea;
+		
 			while((linea=in.readLine())!=null) {
 				Data.add(Float.parseFloat(linea));
 			}

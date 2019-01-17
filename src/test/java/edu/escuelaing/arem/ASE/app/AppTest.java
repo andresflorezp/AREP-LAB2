@@ -4,7 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import java.util.*;
-
+import org.junit.*;
 
 /**
  * Esta clase permite ejecutar los Tests
@@ -37,6 +37,7 @@ public class AppTest extends TestCase
 	 * usando un error de dos decimales
 	 * @throws Exception - Excepcion que se genera por los Buffers
 	 */
+	@org.junit.Test
 	public void testOneMean() throws Exception {
 		read = new Lectura("TestOne.txt");
 		meanTestOne = new Mean(read.getN());
@@ -50,6 +51,7 @@ public class AppTest extends TestCase
 	 * usando un error de dos decimales
 	 * @throws Exception - Excepcion que se genera por los Buffers
 	 */
+	@org.junit.Test
 	public void testOneDesv() throws Exception {
 		read = new Lectura("TestOne.txt");
 		desvEstandarTestOne = new devStand(read.getN());
@@ -64,6 +66,8 @@ public class AppTest extends TestCase
 	 * usando un error de dos decimales
 	 * @throws Exception - Excepcion que se genera por los Buffers
 	 */
+	
+	@org.junit.Test
 	public void testTwoMean() throws Exception {
 		read = new Lectura("TestTwo.txt");
 		meanTestTwo = new Mean(read.getN());
@@ -78,6 +82,8 @@ public class AppTest extends TestCase
 	 * usando un error de dos decimales
 	 * @throws Exception - Excepcion que se genera por los Buffers
 	 */
+	
+	@org.junit.Test
 	public void testTwoDesv() throws Exception {
 		read = new Lectura("TestTwo.txt");
 		desvEstandarTestTwo = new devStand(read.getN());
@@ -86,5 +92,5 @@ public class AppTest extends TestCase
 		assertTrue(Math.abs(desviacion-62.26)<=1e-2);
 
 	}
-
+	
 }

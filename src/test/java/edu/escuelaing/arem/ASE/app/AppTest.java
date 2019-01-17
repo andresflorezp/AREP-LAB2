@@ -7,7 +7,7 @@ import java.util.*;
 
 
 /**
- * Esta clase permite ejecutar los Test
+ * Esta clase permite ejecutar los Tests
  * @author Andres Giovanne Florez Perez
  *
  */
@@ -56,7 +56,6 @@ public class AppTest extends TestCase
 		desvEstandarTestOne.fillLinkedList(read.getData());
 		float desviacion = desvEstandarTestOne.calculatedevStand();
 		assertTrue(Math.abs(desviacion-572.03)<=1e-2);
-		
 	}
 	
 	
@@ -82,7 +81,6 @@ public class AppTest extends TestCase
 	public void testTwoDesv() throws Exception {
 		read = new Lectura("TestTwo.txt");
 		desvEstandarTestTwo = new devStand(read.getN());
-		
 		desvEstandarTestTwo.fillLinkedList(read.getData());
 		float desviacion = desvEstandarTestTwo.calculatedevStand();
 		assertTrue(Math.abs(desviacion-62.26)<=1e-2);

@@ -44,8 +44,6 @@ public class AppTest extends TestCase
 		meanTestOne.fillLinkedList(read.getData());
 		double expected=550.60;
 		double mediana=meanTestOne.calculateMean();
-		//System.out.println(mediana);
-		//assertTrue(Math.abs(mediana-550.6)<=1e-2);
 		assertEquals(mediana, expected);
 		
 	}
@@ -61,8 +59,6 @@ public class AppTest extends TestCase
 		desvEstandarTestOne = new devStand(read.getN());
 		desvEstandarTestOne.fillLinkedList(read.getData());
 		double desviacion = desvEstandarTestOne.calculatedevStand();
-		//System.out.println(desviacion);
-		//assertTrue(Math.abs(desviacion-572.03)<=1e-2);
 		assertEquals(desviacion, expected);
 	}
 	
@@ -80,8 +76,6 @@ public class AppTest extends TestCase
 		meanTestTwo = new Mean(read.getN());
 		meanTestTwo.fillLinkedList(read.getData());
 		double mediana=meanTestTwo.calculateMean();
-		//System.out.println(mediana);
-		//assertTrue(Math.abs(mediana-60.32)<=1e-2);
 		assertEquals(mediana,expected);
 		
 	}
@@ -95,12 +89,10 @@ public class AppTest extends TestCase
 	@org.junit.Test
 	public void testTwoDesv() throws Exception {
 		read = new Lectura("TestTwo.txt");
-		double expected=62.25;
+		double expected=62.26;
 		desvEstandarTestTwo = new devStand(read.getN());
 		desvEstandarTestTwo.fillLinkedList(read.getData());
 		double desviacion = desvEstandarTestTwo.calculatedevStand();
-		//System.out.println(desviacion);
-		//assertTrue(Math.abs(desviacion-62.26)<=1e-2);
 		assertEquals(desviacion,expected);
 
 	}

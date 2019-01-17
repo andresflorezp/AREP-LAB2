@@ -24,8 +24,9 @@ public class Lectura {
 	 * @throws Exception//Se coloca la exception por los Buffers
 	 */
 	public Lectura(String test) throws Exception {
+		
 		try {
-			String myCurrentDir = System.getProperty("user.dir");
+			
 			Data = new ArrayList();
 			Path file = Paths.get("src/main/java/edu/escuelaing/arem/ASE/app/"+test);
 			BufferedReader in = new BufferedReader(new FileReader(file.toString()));

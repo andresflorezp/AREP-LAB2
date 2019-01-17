@@ -36,7 +36,8 @@ public class Mean {
 		
 		double ultimoValor = (sum / N);
 		String decimalTemp = String.format("%.2f",ultimoValor);
-		return Double.parseDouble(decimalTemp);
+		double valor =Double.parseDouble(decimalTemp);
+		return valor;
 
 	}
 	/**

@@ -28,15 +28,16 @@ public class devStand {
 	public double calculatedevStand() {
 		mean.setData(Data);
 		double avg = mean.calculateMean();
-		int sum=0;
-		for(Double number:Data) {
+		double sum=0;
+		for(double number:Data) {
 			sum+=Math.pow(number-avg, 2);
 			
 		}
 		Double valorParcial = sum/(N-1);
-		valorParcial=(Double) Math.sqrt(valorParcial);
+		valorParcial=(double) Math.sqrt(valorParcial);
 		String decimalTemp = String.format("%.2f",valorParcial);
-		return Double.parseDouble(decimalTemp);
+		double valor=Double.parseDouble(decimalTemp);
+		return valor;
 		
 	}
 	/**
@@ -44,7 +45,7 @@ public class devStand {
 	 * @param Datax-Datos para llenar la lista enlazada
 	 */
 	public void fillLinkedList(List<Double> list) {
-		for(Double num:list) {
+		for(double num:list) {
 			this.Data.add(num);	
 		}
 	}
@@ -63,8 +64,8 @@ public class devStand {
 		return N;
 	}
 
-	public void setN(Double n) {
-		N = (Double) n;
+	public void setN(double n) {
+		N = (double) n;
 	}
 	
 

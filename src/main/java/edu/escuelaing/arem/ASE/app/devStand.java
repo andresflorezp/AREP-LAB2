@@ -7,8 +7,8 @@ import java.util.*;
  *
  */
 public class devStand {
-	public LinkedList<Float> Data;//Lista enlazada para almacenar los datos
-	public float N;//Numero de datos que van a entrar para calcular la desviacion estandar
+	public LinkedList<Double> Data;//Lista enlazada para almacenar los datos
+	public double N;//Numero de datos que van a entrar para calcular la desviacion estandar
 	public Mean mean;//La media que permite calcular la desviacion
 	/**
 	 * @param N - Numero de datos que van a entrar para calcular la desviacion estandar
@@ -16,54 +16,55 @@ public class devStand {
 	public devStand(int N) {
 	
 		this.N=(int)N;
-		Data=new LinkedList<Float>();
+		Data=new LinkedList<Double>();
 		mean = new Mean((int) N);
 		
 	}
 	
 	/**
 	 * Este metodo calcula la desviacion estandar
-	 * @return float
+	 * @return Double
 	 */
-	public float calculatedevStand() {
+	public double calculatedevStand() {
 		mean.setData(Data);
-		float avg = mean.calculateMean();
+		double avg = mean.calculateMean();
 		int sum=0;
-		for(Float number:Data) {
+		for(Double number:Data) {
 			sum+=Math.pow(number-avg, 2);
 			
 		}
-		float valorParcial = sum/(N-1);
-		valorParcial=(float) Math.sqrt(valorParcial);
-		return valorParcial;
+		Double valorParcial = sum/(N-1);
+		valorParcial=(Double) Math.sqrt(valorParcial);
+		String decimalTemp = String.format("%.2f",valorParcial);
+		return Double.parseDouble(decimalTemp);
 		
 	}
 	/**
 	 * Este metodo permite llenar la lista enlazada con otra lista 
 	 * @param Datax-Datos para llenar la lista enlazada
 	 */
-	public void fillLinkedList(List<Float> Datax) {
-		for(float num:Datax) {
+	public void fillLinkedList(List<Double> list) {
+		for(Double num:list) {
 			this.Data.add(num);	
 		}
 	}
 	
 
-	public LinkedList<Float> getData() {
+	public LinkedList<Double> getData() {
 		return Data;
 	}
 
-	public void setData(LinkedList<Float> data) {
+	public void setData(LinkedList<Double> data) {
 		Data = data;
 	}
 	
 
-	public float getN() {
+	public Double getN() {
 		return N;
 	}
 
-	public void setN(float n) {
-		N = (float) n;
+	public void setN(Double n) {
+		N = (Double) n;
 	}
 	
 

@@ -4,6 +4,8 @@ package edu.escuelaing.arem.ASE.app;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 //import java.io.InputStreamReader;
 import java.util.*;
 
@@ -15,7 +17,7 @@ import java.util.*;
 public class Lectura {
 
 	public int N;//Numero de datos que van a entrar para calcular la desviacion estandar
-	public List<Float> Data;//Lista que permite almacenar los datos de la entrada
+	public List<Double> Data;//Lista que permite almacenar los datos de la entrada
 
 	/**
 	 * @param test//Me indica el archivo de test que se va a escoger
@@ -25,12 +27,12 @@ public class Lectura {
 		try {
 			String myCurrentDir = System.getProperty("user.dir");
 			Data = new ArrayList();
-			BufferedReader in = new BufferedReader(new FileReader(myCurrentDir+"\\src\\main\\java\\edu\\escuelaing\\arem\\ASE\\app\\"+test));
+			Path file = Paths.get("src/main/java/edu/escuelaing/arem/ASE/app/"+test);
+			BufferedReader in = new BufferedReader(new FileReader(file.toString()));
 			N =Integer.parseInt(in.readLine());
 			String linea;
-		
 			while((linea=in.readLine())!=null) {
-				Data.add(Float.parseFloat(linea));
+				Data.add(Double.parseDouble(linea));
 			}
 			in.close();
 			
@@ -51,11 +53,11 @@ public class Lectura {
 		N = n;
 	}
 
-	public List<Float> getData() {
+	public List<Double> getData() {
 		return Data;
 	}
 
-	public void setData(List<Float> data) {
+	public void setData(List<Double> data) {
 		Data = data;
 	}
 	

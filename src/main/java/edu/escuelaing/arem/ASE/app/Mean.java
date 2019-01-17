@@ -9,56 +9,57 @@ import java.util.*;
  *
  */
 public class Mean {
-	public LinkedList<Float> Data;//Lista enlazada para almacenar los datos
-	public float N;//Numero de datos que van a entrar para calcular la desviacion estandar
+	public LinkedList<Double> Data;//Lista enlazada para almacenar los datos
+	public double N;//Numero de datos que van a entrar para calcular la desviacion estandar
 
 	/**
 	 * @param n - Entra el numero de datos para calcular la media
 	 */
 	public Mean(int n) {
 	
-		this.N = (float) n;
-		Data = new LinkedList<Float>();
+		this.N = (double) n;
+		Data = new LinkedList<Double>();
 
 	}
 
 	/**
 	 * Este metodo permite calcular la media
-	 * @return float
+	 * @return double
 	 */
-	public float calculateMean() {
-		float sum = 0;
-		for (Float number : Data) {
+	public double calculateMean() {
+		double sum = 0;
+		for (double number : Data) {
 			
 			sum += number;
 
 		}
 		
-		float ultimoValor = (sum / N);
-		return (float) ultimoValor;
+		double ultimoValor = (sum / N);
+		String decimalTemp = String.format("%.2f",ultimoValor);
+		return Double.parseDouble(decimalTemp);
 
 	}
 	/**
 	 * Este metodo permite llenar la lista enlazada con otra lista 
 	 * @param Datax-Datos para llenar la lista enlazada
 	 */
-	public void fillLinkedList(List<Float> Datax) {
-		for(float num:Datax) {
+	public void fillLinkedList(List<Double> Datax) {
+		for(double num:Datax) {
 			this.Data.add(num);
 			
 		}
 	}
 
-	public LinkedList<Float> getData() {
+	public LinkedList<Double> getData() {
 		return Data;
 	}
 
 	
-	public void setData(LinkedList<Float> data) {
+	public void setData(LinkedList<Double> data) {
 		Data = data;
 	}
 
-	public float getN() {
+	public double getN() {
 		return N;
 	}
 

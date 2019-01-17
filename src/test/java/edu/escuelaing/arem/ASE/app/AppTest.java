@@ -42,8 +42,11 @@ public class AppTest extends TestCase
 		read = new Lectura("TestOne.txt");
 		meanTestOne = new Mean(read.getN());
 		meanTestOne.fillLinkedList(read.getData());
-		float mediana=meanTestOne.calculateMean();
-		assertTrue(Math.abs(mediana-550.6)<=1e-2);
+		double expected=550.60;
+		double mediana=meanTestOne.calculateMean();
+		//System.out.println(mediana);
+		//assertTrue(Math.abs(mediana-550.6)<=1e-2);
+		assertEquals(mediana, expected);
 		
 	}
 	/**
@@ -54,10 +57,13 @@ public class AppTest extends TestCase
 	@org.junit.Test
 	public void testOneDesv() throws Exception {
 		read = new Lectura("TestOne.txt");
+		double expected=572.03;
 		desvEstandarTestOne = new devStand(read.getN());
 		desvEstandarTestOne.fillLinkedList(read.getData());
-		float desviacion = desvEstandarTestOne.calculatedevStand();
-		assertTrue(Math.abs(desviacion-572.03)<=1e-2);
+		double desviacion = desvEstandarTestOne.calculatedevStand();
+		//System.out.println(desviacion);
+		//assertTrue(Math.abs(desviacion-572.03)<=1e-2);
+		assertEquals(desviacion, expected);
 	}
 	
 	
@@ -69,11 +75,14 @@ public class AppTest extends TestCase
 	
 	@org.junit.Test
 	public void testTwoMean() throws Exception {
+		double expected=60.32;
 		read = new Lectura("TestTwo.txt");
 		meanTestTwo = new Mean(read.getN());
 		meanTestTwo.fillLinkedList(read.getData());
-		float mediana=meanTestTwo.calculateMean();
-		assertTrue(Math.abs(mediana-60.32)<=1e-2);
+		double mediana=meanTestTwo.calculateMean();
+		//System.out.println(mediana);
+		//assertTrue(Math.abs(mediana-60.32)<=1e-2);
+		assertEquals(mediana,expected);
 		
 	}
 	
@@ -86,10 +95,13 @@ public class AppTest extends TestCase
 	@org.junit.Test
 	public void testTwoDesv() throws Exception {
 		read = new Lectura("TestTwo.txt");
+		double expected=62.25;
 		desvEstandarTestTwo = new devStand(read.getN());
 		desvEstandarTestTwo.fillLinkedList(read.getData());
-		float desviacion = desvEstandarTestTwo.calculatedevStand();
-		assertTrue(Math.abs(desviacion-62.26)<=1e-2);
+		double desviacion = desvEstandarTestTwo.calculatedevStand();
+		//System.out.println(desviacion);
+		//assertTrue(Math.abs(desviacion-62.26)<=1e-2);
+		assertEquals(desviacion,expected);
 
 	}
 	

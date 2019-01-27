@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/*edu.escuelaing.arem.ASE.app.Spark
+web: java $JAVA_OPTS -cp target/classes:target/miprimera-app-1.0-SNAPSHOT.jar

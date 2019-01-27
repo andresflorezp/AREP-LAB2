@@ -35,10 +35,10 @@ public class devStand {
 		}
 		Double valorParcial = sum/(N-1);
 		valorParcial=(double) Math.sqrt(valorParcial);
-		String decimalTemp = String.format("%.2f",valorParcial);
-		double valor=Double.parseDouble(decimalTemp);
-		return valor;
-		
+		//String decimalTemp = String.format("%.2f",valorParcial);
+		//double valor=Double.parseDouble(decimalTemp);
+		//return valor;
+		return valorParcial;
 	}
 	/**
 	 * Este metodo permite llenar la lista enlazada con otra lista 
